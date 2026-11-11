@@ -89,7 +89,7 @@ const allUsers = [
   },
 ];
 
-// Твій код тут
+const getUserEmails = () => {};
 
 console.log(getUserEmails(allUsers));
 // ['alex@indexia.com', 'nora@tubesys.com', 'max@xinware.com',
