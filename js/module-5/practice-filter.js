@@ -26,3 +26,39 @@ const getPricesInRange = (prices, minPrice, maxPrice) => {
 console.log(getPricesInRange(menuPrices, 50, 100)); // [55, 85, 95]
 console.log(getPricesInRange(menuPrices, 25, 45)); // [40, 25]
 console.log(getPricesInRange(menuPrices, 200, 300)); // []
+
+/*
+ * Масив books містить книги з властивостями title, author і rating.
+ * 1. Оголоси змінну topRatedBooks і поклади в неї масив книг,
+ *    рейтинг яких не менший за minRating. Використай метод filter().
+ * 2. Оголоси змінну booksByAuthor і поклади в неї масив книг,
+ *    автор яких збігається зі значенням змінної author.
+ */
+
+const books = [
+  { title: 'Silent Harbor', author: 'Alex', rating: 8.38 },
+  { title: 'Paper Moons', author: 'Nora', rating: 8.51 },
+  { title: 'The Glass Garden', author: 'Leo', rating: 7.75 },
+  { title: 'North of Winter', author: 'Kim', rating: 7.94 },
+  { title: 'Ashes and Salt', author: 'Alex', rating: 8.67 },
+];
+
+const minRating = 8;
+const author = 'Alex';
+
+const topRatedBooks = books.filter(book => book.rating >= minRating);
+
+const booksByAuthor = books.filter(book => book.author === author);
+
+console.log(topRatedBooks);
+// [
+//   { title: 'Silent Harbor', author: 'Alex', rating: 8.38 },
+//   { title: 'Paper Moons', author: 'Nora', rating: 8.51 },
+//   { title: 'Ashes and Salt', author: 'Alex', rating: 8.67 }
+// ]
+
+console.log(booksByAuthor);
+// [
+//   { title: 'Silent Harbor', author: 'Alex', rating: 8.38 },
+//   { title: 'Ashes and Salt', author: 'Alex', rating: 8.67 }
+// ]
