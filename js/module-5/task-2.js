@@ -1,5 +1,7 @@
 'use strict';
 
+// Task about peopleEye
+
 const allUsers = [
   {
     name: 'Alex',
@@ -102,4 +104,31 @@ console.log(getUsersWithEyeColor(allUsers, 'green'));
 // Масив із двох користувачів: Max, Iris
 
 console.log(getUsersWithEyeColor(allUsers, 'red'));
+// []
+
+// Task about peopleAge
+
+/*
+ * Функція getUsersWithAge(users, minAge, maxAge) повертає масив користувачів,
+ * вік яких потрапляє в діапазон від minAge до maxAge включно.
+ *   users — масив обʼєктів користувачів.
+ *   minAge, maxAge — межі діапазону (числа).
+ * 1. Оголоси getUsersWithAge як стрілочну функцію.
+ * 2. Перебери масив users методом filter().
+ * 3. У колбеку поверни true лише для тих користувачів, у яких age
+ *    не менший за minAge і не більший за maxAge.
+ * 4. Поверни новий масив, який дав filter().
+ */
+
+const getUsersWithAge = (users, minAge, maxAge) => {
+  return users.filter(user => user.age >= minAge && user.age <= maxAge);
+};
+
+console.log(getUsersWithAge(allUsers, 20, 30));
+// Масив із трьох користувачів: Max, Iris, Sam
+
+console.log(getUsersWithAge(allUsers, 30, 40));
+// Масив із чотирьох користувачів: Alex, Nora, Leo, Kim
+
+console.log(getUsersWithAge(allUsers, 80, 100));
 // []
